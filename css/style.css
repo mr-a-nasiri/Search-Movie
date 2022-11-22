@@ -33,6 +33,10 @@ body {
   margin: auto;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /**************************************/
 /*********** Header ***********/
 /**************************************/
@@ -85,6 +89,7 @@ body {
   font-size: 1.6rem;
   background-color: #2e2e2f;
   color: #a5a5a5;
+  cursor: pointer;
 }
 
 .search-input {
@@ -105,6 +110,7 @@ body {
   font-weight: 500;
   background-color: #4b4b4b;
   color: #fff;
+  cursor: pointer;
 }
 
 .btn-search {
@@ -207,4 +213,24 @@ body {
 .movie-summary {
   font-size: 1.4rem;
   color: #a5a5a5;
+}
+
+@media (width > 800px) {
+  body {
+    background-color: #1c1c1c;
+  }
+  .wide-screen {
+    max-width: 600px;
+    margin: auto;
+    background-color: #121212;
+  }
+
+  .header-content {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .watchlist {
+    align-self: center;
+  }
 }
