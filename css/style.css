@@ -100,6 +100,7 @@ body {
   background-color: #2e2e2f;
   color: #a5a5a5;
   border: 0;
+  outline: 0;
 }
 
 .btn {
@@ -113,9 +114,6 @@ body {
   cursor: pointer;
 }
 
-.btn-search {
-}
-
 /**************************************/
 /*********** Movie List ***********/
 /**************************************/
@@ -123,6 +121,11 @@ body {
 .main-section {
   height: 75vh;
   position: relative;
+  overflow: hidden;
+}
+
+.block {
+  height: 6rem;
 }
 
 .intro {
@@ -147,15 +150,16 @@ body {
   color: #2e2e2f;
 }
 
-.movie-list {
-  margin-top: 6rem;
+#movies--container {
+  height: 70vh;
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
+  overflow-y: scroll;
 }
 
 /**************************************/
-/*********** Movie List ***********/
+/*********** Movie ***********/
 /**************************************/
 
 .movie {
@@ -165,12 +169,16 @@ body {
   border-bottom: 1.5px solid #2c2c2c;
 }
 
+.movie:last-child {
+  margin-bottom: 10rem;
+}
+
 .movie-img {
-  flex: 25%;
+  width: 40%;
 }
 
 .movie-content {
-  flex: 75%;
+  flex: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -215,6 +223,10 @@ body {
   color: #a5a5a5;
 }
 
+/**************************************/
+/*********** Media Queries ***********/
+/**************************************/
+
 @media (width > 800px) {
   body {
     background-color: #1c1c1c;
@@ -232,5 +244,13 @@ body {
 
   .watchlist {
     align-self: center;
+  }
+
+  .movie-img {
+    width: 25%;
+  }
+
+  .movie-content {
+    flex: 75%;
   }
 }
