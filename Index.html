@@ -15,7 +15,7 @@
     <script src="https://kit.fontawesome.com/fe57c98e23.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/app.js"></script>
+    <script type="module" src="js/app.js"></script>
     <title>Document</title>
   </head>
   <body>
@@ -29,7 +29,7 @@
             <a href="#" class="watchlist">My Watchlist</a>
           </div>
 
-          <form class="search">
+          <div class="search">
             <i class="fa-solid fa-magnifying-glass"></i>
             <input
               class="search-input"
@@ -39,46 +39,28 @@
               aria-label="Name of the movie"
               placeholder="Searching something"
             />
-
-            <button class="btn btn-search">Search</button>
-          </form>
+          </div>
         </div>
       </header>
 
       <!-- Movie List -->
       <section class="main-section">
         <div class="block"></div>
-        <div class="intro hidden">
+        <div class="spinner hidden"><i class="fa-solid fa-spinner"></i></div>
+        <div class="intro">
           <img src="img/Icon.png" alt="logo" class="logo" />
 
           <span class="intro-txt">Start exploring</span>
         </div>
+        <div class="not-found hidden">
+          Unable to find what you're looking for. Please try another search.
+        </div>
 
         <div class="container">
           <div id="movies--container"></div>
-          <!-- <div class="movie">
-              <img src="img/image 33.png" alt="Movie image" class="movie-img" />
-
-              <div class="movie-content">
-                <span class="movie-title">Blade Runner</span>
-
-                <div class="movie-content-details">
-                  <span class="movie-duration">116min</span>
-                  <span class="movie-genres">Drama, Mystery, Sci-fi</span>
-                </div>
-
-                <button class="movie-to-watchlist">
-                  <i class="fa-solid fa-circle-plus"></i>
-                  Watchlist
-                </button>
-
-                <p class="movie-summary">
-                  A blade runner must pursue and terminate four replicants who stole a ship in
-                  space, and have returned to Earth to find their creator.
-                </p>
-              </div>
-            </div> -->
         </div>
+
+        <footer class="footer">Footer</footer>
       </section>
     </main>
   </body>

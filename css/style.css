@@ -14,7 +14,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  /* outline: 1px solid red;*/
+  /* outline: 1px solid red !important; */
 }
 
 html {
@@ -60,10 +60,11 @@ body {
 
 .watchlist {
   align-self: flex-start;
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   font-weight: 700;
   color: #aaa;
   border-bottom: 2px dashed #aaa;
+  padding-bottom: 2px;
   text-decoration: none;
   cursor: pointer;
 }
@@ -73,7 +74,7 @@ body {
   left: 50%;
   bottom: 0;
   transform: translate(-50%, 50%);
-  width: 80%;
+  width: 50%;
   display: flex;
   justify-content: center;
   height: 3.6em;
@@ -93,7 +94,7 @@ body {
 }
 
 .search-input {
-  flex: 60%;
+  flex: 90%;
   padding: 1rem;
   font-size: 1.4rem;
   font-weight: 500;
@@ -101,17 +102,6 @@ body {
   color: #a5a5a5;
   border: 0;
   outline: 0;
-}
-
-.btn {
-  flex: 30%;
-  display: inline-block;
-  border: 0;
-  font-size: 1.4rem;
-  font-weight: 500;
-  background-color: #4b4b4b;
-  color: #fff;
-  cursor: pointer;
 }
 
 /**************************************/
@@ -150,12 +140,51 @@ body {
   color: #2e2e2f;
 }
 
+.not-found {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 320px;
+  height: 200px;
+  color: #787878;
+  font-size: 1.8rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.spinner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.fa-spinner {
+  font-size: 8rem;
+  animation: loading 1s cubic-bezier(0.95, 0.5, 0.795, 0.535) infinite;
+}
+
 #movies--container {
-  height: 70vh;
+  height: 63vh;
   display: flex;
   flex-direction: column;
   gap: 2.6rem;
   overflow-y: scroll;
+  position: relative;
+}
+
+.footer {
+  background-color: #222;
+  color: #ddd;
+  font-size: 1.2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vh;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  bottom: 0;
 }
 
 /**************************************/
@@ -201,9 +230,6 @@ body {
   font-size: 1.2rem;
 }
 
-/* .movie-genres {
-} */
-
 .movie-to-watchlist {
   border: 0;
   background-color: inherit;
@@ -221,6 +247,16 @@ body {
 .movie-summary {
   font-size: 1.4rem;
   color: #a5a5a5;
+}
+
+@keyframes loading {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 /**************************************/
